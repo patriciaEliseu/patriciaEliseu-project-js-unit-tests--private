@@ -14,6 +14,7 @@
 
 const average = (myArrays) => {
     let somaArray = 0;
+    // https://cibersistemas.pt/tecnologia/como-verificar-se-um-array-javascript-esta-vazio-ou-nao-com-length/
     if (myArrays.length === 0) {
         return undefined;
     }
