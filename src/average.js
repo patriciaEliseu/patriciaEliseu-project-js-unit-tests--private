@@ -12,6 +12,18 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
-
+const average = (myArrays) => {
+    let somaArray = 0;
+    if (myArrays.length === 0) {
+        return undefined;
+    }
+    for (let index = 0; index < myArrays.length; index += 1) {
+        if (typeof myArrays[index] !== 'number') {
+            return undefined;
+        }
+        somaArray += myArrays[index];
+    }
+    return Math.round(somaArray / myArrays.length);
+};
+/* console.log(average([1, 2, 3])); */
 module.exports = average;
