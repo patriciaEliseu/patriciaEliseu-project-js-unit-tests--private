@@ -33,8 +33,17 @@
   arrayGenerator('entries', { sum: 3, mult: 2, div: 1, sub: 0 }) // [ [ 'sum', 3 ], [ 'mult', 2 ], [ 'div', 1 ], [ 'sub', 0 ] ]
 */
 
-const calculator = (number1, number2) => {};
-
-const arrayGenerator = (type, object) => {};
-
+const calculator = (number1, number2) => {
+    let operadores = {
+        sum: number1 + number2,
+        mult: number1 * number2,
+        div: Math.floor(number1 / number2),
+        sub: number1 - number2,
+    };
+    return operadores;
+};
+console.log(calculator(1, 2));
+// quando eu recebo um object como parametro de uma função em vez do ponto eu coloco colchetes.
+const arrayGenerator = (type, object) => Object[type](object);
+console.log(arrayGenerator('values', calculator(1, 2)));
 module.exports = { calculator, arrayGenerator };
