@@ -76,7 +76,10 @@ describe('9 - Implemente os casos de teste da função `getCharacter`', () => {
     // Teste se os parâmetros não são Case Sensitive.
     // https://www.horadecodar.com.br/2022/03/05/verificar-texto-sem-case-sensitive-em-javascript/
     it('Teste se os parâmetros não são Case Sensitive ', () => {
-        expect(getCharacter('ARYA')).not.toBe('arya');
+        // tenho que comparar o objeto 'arya com o objeto'ARYA'.
+        expect(getCharacter('ARYA')).toEqual(getCharacter('arya'));
+        expect(getCharacter('ARYA') === getCharacter('arya')).toBe(true);
+        expect(getCharacter('ARYA') === getCharacter('arya')).toBeTruthy();
     });
     // Teste se ao passar um nome que não está na tabela, a função retorna undefined.
     it('Teste se ao passar um nome que não está na tabela, a função retorna undefined', () => {
