@@ -50,7 +50,7 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     it('Teste se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si.', () => {
         const param = ('Alcool gel' !== 'Máscara');
         const expec = ([{ name: 'Alcool gel' !== 'Máscara' }])
-        expect(productDetails(param)).toEqual(expec);
+        expect(productDetails(param)).not.toBe(expec);
     });
     // Teste se os dois productIds terminam com 123.
     it('Teste se os dois productIds terminam com 123.', () => {
